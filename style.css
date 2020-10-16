@@ -1,0 +1,16 @@
+h1 { 
+    font-size: 25 px ;
+    color: red;
+    text-align: center;
+
+}
+.jumbotron {
+    height: 25px;
+    padding-top: 15px;
+}
+
+.card{
+    margin: 0 auto; 
+        float: none; 
+        margin-bottom: 10px; 
+}

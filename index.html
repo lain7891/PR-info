@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1 class="display-7">JOB TELEPORT</h1>
+    </div>
+
+    <div class="container">
+      <div class="row">
+<div class="col-sm-12" id="search-card">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <p class="card-text">
+        
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary" type="button">Cities</button>
+          </div>
+          <select class="custom-select" id="inputGroupSelect03" aria-label="Example select with button addon">
+            <option selected>Choose...</option>
+            <option value="" style="display: none" data-reactid="30"></option>
+  <option value="aarhus" data-reactid="31">Aarhus</option>
+  <option value="adelaide" data-reactid="32">Adelaide</option>
+  <option value="albuquerque" data-reactid="33">Albuquerque</option>
+  <option value="almaty" data-reactid="34">Almaty</option>
+  <option value="amsterdam" data-reactid="35">Amsterdam</option>
+  <option value="anchorage" data-reactid="36">Anchorage</option>
+  <option value="andorra" data-reactid="37">Andorra</option>
+  <option value="ankara" data-reactid="38">Ankara</option>
+  <option value="asheville" data-reactid="39">Asheville</option>
+  <option value="asuncion" data-reactid="40">Asuncion</option>
+  <option value="athens" data-reactid="41">Athens</option>
+  <option value="atlanta" data-reactid="42">Atlanta</option>
+  <option value="auckland" data-reactid="43">Auckland</option>
+  <option value="austin" data-reactid="44">Austin</option>
+  <option value="baku" data-reactid="45">Baku</option>
+  <option value="bali" data-reactid="46">Bali</option>
+  <option value="baltimore" data-reactid="47">Baltimore</option>
+  <option value="bangkok" data-reactid="48">Bangkok</option>
+  <option value="barcelona" data-reactid="49">Barcelona</option>
+  <option value="beijing" data-reactid="50">Beijing</option>
+  <option value="beirut" data-reactid="51">Beirut</option>
+  <option value="belfast" data-reactid="52">Belfast</option>
+  <option value="belgrade" data-reactid="53">Belgrade</option>
+  <option value="belize-city" data-reactid="54">Belize City</option>
+  <option value="bengaluru" data-reactid="55">Bengaluru</option>
+  <option value="bergen" data-reactid="56">Bergen</option>
+  <option value="berlin" data-reactid="57">Berlin</option>
+  <option value="bern" data-reactid="58">Bern</option>
+  <option value="bilbao" data-reactid="59">Bilbao</option>
+  <option value="birmingham" data-reactid="60">Birmingham</option>
+  <option value="birmingham-al" data-reactid="61">Birmingham, AL</option>
+  <option value="bogota" data-reactid="62">Bogota</option>
+  <option value="boise" data-reactid="63">Boise</option>
+  <option value="bologna" data-reactid="64">Bologna</option>
+  <option value="bordeaux" data-reactid="65">Bordeaux</option>
+  <option value="boston" data-reactid="66">Boston</option>
+  <option value="boulder" data-reactid="67">Boulder</option>
+  <option value="bozeman" data-reactid="68">Bozeman</option>
+  <option value="bratislava" data-reactid="69">Bratislava</option>
+  <option value="brighton" data-reactid="70">Brighton</option>
+  <option value="brisbane" data-reactid="71">Brisbane</option>
+  <option value="bristol" data-reactid="72">Bristol</option>
+  <option value="brno" data-reactid="73">Brno</option>
+  <option value="brussels" data-reactid="74">Brussels</option>
+  <option value="bucharest" data-reactid="75">Bucharest</option>
+  <option value="budapest" data-reactid="76">Budapest</option>
+  <option value="buenos-aires" data-reactid="77">Buenos Aires</option>
+  <option value="buffalo" data-reactid="78">Buffalo</option>
+  <option value="cairo" data-reactid="79">Cairo</option>
+  <option value="calgary" data-reactid="80">Calgary</option>
+  <option value="cambridge" data-reactid="81">Cambridge</option>
+  <option value="cape-town" data-reactid="82">Cape Town</option>
+  <option value="caracas" data-reactid="83">Caracas</option>
+  <option value="cardiff" data-reactid="84">Cardiff</option>
+  <option value="casablanca" data-reactid="85">Casablanca</option>
+  <option value="charleston" data-reactid="86">Charleston</option>
+  <option value="charlotte" data-reactid="87">Charlotte</option>
+  <option value="chattanooga" data-reactid="88">Chattanooga</option>
+  <option value="chennai" data-reactid="89">Chennai</option>
+  <option value="chiang-mai" data-reactid="90">Chiang Mai</option>
+  <option value="chicago" data-reactid="91">Chicago</option>
+  <option value="chisinau" data-reactid="92">Chisinau</option>
+  <option value="christchurch" data-reactid="93">Christchurch</option>
+  <option value="cincinnati" data-reactid="94">Cincinnati</option>
+  <option value="cleveland" data-reactid="95">Cleveland</option>
+  <option value="cluj-napoca" data-reactid="96">Cluj-Napoca</option>
+  <option value="cologne" data-reactid="97">Cologne</option>
+  <option value="colorado-springs" data-reactid="98">Colorado Springs</option>
+  <option value="columbus" data-reactid="99">Columbus</option>
+  <option value="copenhagen" data-reactid="100">Copenhagen</option>
+  <option value="cork" data-reactid="101">Cork</option>
+  <option value="curitiba" data-reactid="102">Curitiba</option>
+  <option value="dallas" data-reactid="103">Dallas</option>
+  <option value="dar-es-salaam" data-reactid="104">Dar es Salaam</option>
+  <option value="delhi" data-reactid="105">Delhi</option>
+  <option value="denver" data-reactid="106">Denver</option>
+  <option value="des-moines" data-reactid="107">Des Moines</option>
+  <option value="detroit" data-reactid="108">Detroit</option>
+  <option value="doha" data-reactid="109">Doha</option>
+  <option value="dresden" data-reactid="110">Dresden</option>
+  <option value="dubai" data-reactid="111">Dubai</option>
+  <option value="dublin" data-reactid="112">Dublin</option>
+  <option value="dusseldorf" data-reactid="113">Dusseldorf</option>
+  <option value="edinburgh" data-reactid="114">Edinburgh</option>
+  <option value="edmonton" data-reactid="115">Edmonton</option>
+  <option value="eindhoven" data-reactid="116">Eindhoven</option>
+  <option value="eugene" data-reactid="117">Eugene</option>
+  <option value="florence" data-reactid="118">Florence</option>
+  <option value="florianopolis" data-reactid="119">Florianopolis</option>
+  <option value="fort-collins" data-reactid="120">Fort Collins</option>
+  <option value="frankfurt" data-reactid="121">Frankfurt</option>
+  <option value="fukuoka" data-reactid="122">Fukuoka</option>
+  <option value="gaillimh" data-reactid="123">Galway</option>
+  <option value="gdansk" data-reactid="124">Gdansk</option>
+  <option value="geneva" data-reactid="125">Geneva</option>
+  <option value="gibraltar" data-reactid="126">Gibraltar</option>
+  <option value="glasgow" data-reactid="127">Glasgow</option>
+  <option value="gothenburg" data-reactid="128">Gothenburg</option>
+  <option value="grenoble" data-reactid="129">Grenoble</option>
+  <option value="guadalajara" data-reactid="130">Guadalajara</option>
+  <option value="guatemala-city" data-reactid="131">Guatemala City</option>
+  <option value="halifax" data-reactid="132">Halifax</option>
+  <option value="hamburg" data-reactid="133">Hamburg</option>
+  <option value="hannover" data-reactid="134">Hannover</option>
+  <option value="havana" data-reactid="135">Havana</option>
+  <option value="helsinki" data-reactid="136">Helsinki</option>
+  <option value="ho-chi-minh-city" data-reactid="137">Ho Chi Minh City</option>
+  <option value="hong-kong" data-reactid="138">Hong Kong</option>
+  <option value="honolulu" data-reactid="139">Honolulu</option>
+  <option value="houston" data-reactid="140">Houston</option>
+  <option value="hyderabad" data-reactid="141">Hyderabad</option>
+  <option value="indianapolis" data-reactid="142">Indianapolis</option>
+  <option value="innsbruck" data-reactid="143">Innsbruck</option>
+  <option value="istanbul" data-reactid="144">Istanbul</option>
+  <option value="jacksonville" data-reactid="145">Jacksonville</option>
+  <option value="jakarta" data-reactid="146">Jakarta</option>
+  <option value="johannesburg" data-reactid="147">Johannesburg</option>
+  <option value="kansas-city" data-reactid="148">Kansas City</option>
+  <option value="karlsruhe" data-reactid="149">Karlsruhe</option>
+  <option value="kathmandu" data-reactid="150">Kathmandu</option>
+  <option value="kiev" data-reactid="151">Kiev</option>
+  <option value="kingston" data-reactid="152">Kingston</option>
+  <option value="knoxville" data-reactid="153">Knoxville</option>
+  <option value="krakow" data-reactid="154">Krakow</option>
+  <option value="kuala-lumpur" data-reactid="155">Kuala Lumpur</option>
+  <option value="kyoto" data-reactid="156">Kyoto</option>
+  <option value="lagos" data-reactid="157">Lagos</option>
+  <option value="la-paz" data-reactid="158">La Paz</option>
+  <option value="las-palmas-de-gran-canaria" data-reactid="159">
+    Las Palmas de Gran Canaria
+  </option>
+  <option value="las-vegas" data-reactid="160">Las Vegas</option>
+  <option value="lausanne" data-reactid="161">Lausanne</option>
+  <option value="leeds" data-reactid="162">Leeds</option>
+  <option value="leipzig" data-reactid="163">Leipzig</option>
+  <option value="lille" data-reactid="164">Lille</option>
+  <option value="lima" data-reactid="165">Lima</option>
+  <option value="lisbon" data-reactid="166">Lisbon</option>
+  <option value="liverpool" data-reactid="167">Liverpool</option>
+  <option value="ljubljana" data-reactid="168">Ljubljana</option>
+  <option value="london" data-reactid="169">London</option>
+  <option value="los-angeles" data-reactid="170">Los Angeles</option>
+  <option value="louisville" data-reactid="171">Louisville</option>
+  <option value="luxembourg" data-reactid="172">Luxembourg</option>
+  <option value="lviv" data-reactid="173">Lviv</option>
+  <option value="lyon" data-reactid="174">Lyon</option>
+  <option value="madison" data-reactid="175">Madison</option>
+  <option value="madrid" data-reactid="176">Madrid</option>
+  <option value="malaga" data-reactid="177">Malaga</option>
+  <option value="malmo" data-reactid="178">Malmo</option>
+  <option value="managua" data-reactid="179">Managua</option>
+  <option value="manchester" data-reactid="180">Manchester</option>
+  <option value="manila" data-reactid="181">Manila</option>
+  <option value="marseille" data-reactid="182">Marseille</option>
+  <option value="medellin" data-reactid="183">Medellin</option>
+  <option value="melbourne" data-reactid="184">Melbourne</option>
+  <option value="memphis" data-reactid="185">Memphis</option>
+  <option value="mexico-city" data-reactid="186">Mexico City</option>
+  <option value="miami" data-reactid="187">Miami</option>
+  <option value="milan" data-reactid="188">Milan</option>
+  <option value="milwaukee" data-reactid="189">Milwaukee</option>
+  <option value="minneapolis-saint-paul" data-reactid="190">
+    Minneapolis-Saint Paul
+  </option>
+  <option value="minsk" data-reactid="191">Minsk</option>
+  <option value="montevideo" data-reactid="192">Montevideo</option>
+  <option value="montreal" data-reactid="193">Montreal</option>
+  <option value="moscow" data-reactid="194">Moscow</option>
+  <option value="mumbai" data-reactid="195">Mumbai</option>
+  <option value="munich" data-reactid="196">Munich</option>
+  <option value="nairobi" data-reactid="197">Nairobi</option>
+  <option value="nantes" data-reactid="198">Nantes</option>
+  <option value="naples" data-reactid="199">Naples</option>
+  <option value="nashville" data-reactid="200">Nashville</option>
+  <option value="new-orleans" data-reactid="201">New Orleans</option>
+  <option value="new-york" data-reactid="202">New York</option>
+  <option value="nice" data-reactid="203">Nice</option>
+  <option value="nicosia" data-reactid="204">Nicosia</option>
+  <option value="oklahoma-city" data-reactid="205">Oklahoma City</option>
+  <option value="omaha" data-reactid="206">Omaha</option>
+  <option value="orlando" data-reactid="207">Orlando</option>
+  <option value="osaka" data-reactid="208">Osaka</option>
+  <option value="oslo" data-reactid="209">Oslo</option>
+  <option value="ottawa" data-reactid="210">Ottawa</option>
+  <option value="oulu" data-reactid="211">Oulu</option>
+  <option value="oxford" data-reactid="212">Oxford</option>
+  <option value="palo-alto" data-reactid="213">Palo Alto</option>
+  <option value="panama" data-reactid="214">Panama</option>
+  <option value="paris" data-reactid="215">Paris</option>
+  <option value="perth" data-reactid="216">Perth</option>
+  <option value="philadelphia" data-reactid="217">Philadelphia</option>
+  <option value="phnom-penh" data-reactid="218">Phnom Penh</option>
+  <option value="phoenix" data-reactid="219">Phoenix</option>
+  <option value="phuket" data-reactid="220">Phuket</option>
+  <option value="pittsburgh" data-reactid="221">Pittsburgh</option>
+  <option value="portland-me" data-reactid="222">Portland, ME</option>
+  <option value="portland-or" data-reactid="223">Portland, OR</option>
+  <option value="porto" data-reactid="224">Porto</option>
+  <option value="porto-alegre" data-reactid="225">Porto Alegre</option>
+  <option value="prague" data-reactid="226">Prague</option>
+  <option value="providence" data-reactid="227">Providence</option>
+  <option value="quebec" data-reactid="228">Quebec</option>
+  <option value="quito" data-reactid="229">Quito</option>
+  <option value="raleigh" data-reactid="230">Raleigh</option>
+  <option value="reykjavik" data-reactid="231">Reykjavik</option>
+  <option value="richmond" data-reactid="232">Richmond</option>
+  <option value="riga" data-reactid="233">Riga</option>
+  <option value="rio-de-janeiro" data-reactid="234">Rio De Janeiro</option>
+  <option value="riyadh" data-reactid="235">Riyadh</option>
+  <option value="rochester" data-reactid="236">Rochester</option>
+  <option value="rome" data-reactid="237">Rome</option>
+  <option value="rotterdam" data-reactid="238">Rotterdam</option>
+  <option value="saint-petersburg" data-reactid="239">Saint Petersburg</option>
+  <option value="salt-lake-city" data-reactid="240">Salt Lake City</option>
+  <option value="san-antonio" data-reactid="241">San Antonio</option>
+  <option value="san-diego" data-reactid="242">San Diego</option>
+  <option value="san-francisco-bay-area" data-reactid="243">
+    San Francisco Bay Area
+  </option>
+  <option value="san-jose" data-reactid="244">San Jose</option>
+  <option value="san-juan" data-reactid="245">San Juan</option>
+  <option value="san-luis-obispo" data-reactid="246">San Luis Obispo</option>
+  <option value="san-salvador" data-reactid="247">San Salvador</option>
+  <option value="santiago" data-reactid="248">Santiago</option>
+  <option value="santo-domingo" data-reactid="249">Santo Domingo</option>
+  <option value="sao-paulo" data-reactid="250">Sao Paulo</option>
+  <option value="sarajevo" data-reactid="251">Sarajevo</option>
+  <option value="saskatoon" data-reactid="252">Saskatoon</option>
+  <option value="seattle" data-reactid="253">Seattle</option>
+  <option value="seoul" data-reactid="254">Seoul</option>
+  <option value="seville" data-reactid="255">Seville</option>
+  <option value="shanghai" data-reactid="256">Shanghai</option>
+  <option value="singapore" data-reactid="257">Singapore</option>
+  <option value="skopje" data-reactid="258">Skopje</option>
+  <option value="sofia" data-reactid="259">Sofia</option>
+  <option value="st-louis" data-reactid="260">St. Louis</option>
+  <option value="stockholm" data-reactid="261">Stockholm</option>
+  <option value="stuttgart" data-reactid="262">Stuttgart</option>
+  <option value="sydney" data-reactid="263">Sydney</option>
+  <option value="taipei" data-reactid="264">Taipei</option>
+  <option value="tallinn" data-reactid="265">Tallinn</option>
+  <option value="tampa-bay-area" data-reactid="266">Tampa Bay Area</option>
+  <option value="tampere" data-reactid="267">Tampere</option>
+  <option value="tartu" data-reactid="268">Tartu</option>
+  <option value="tashkent" data-reactid="269">Tashkent</option>
+  <option value="tbilisi" data-reactid="270">Tbilisi</option>
+  <option value="tehran" data-reactid="271">Tehran</option>
+  <option value="tel-aviv" data-reactid="272">Tel Aviv</option>
+  <option value="the-hague" data-reactid="273">The Hague</option>
+  <option value="thessaloniki" data-reactid="274">Thessaloniki</option>
+  <option value="tokyo" data-reactid="275">Tokyo</option>
+  <option value="toronto" data-reactid="276">Toronto</option>
+  <option value="toulouse" data-reactid="277">Toulouse</option>
+  <option value="tunis" data-reactid="278">Tunis</option>
+  <option value="turin" data-reactid="279">Turin</option>
+  <option value="turku" data-reactid="280">Turku</option>
+  <option value="uppsala" data-reactid="281">Uppsala</option>
+  <option value="utrecht" data-reactid="282">Utrecht</option>
+  <option value="valencia" data-reactid="283">Valencia</option>
+  <option value="valletta" data-reactid="284">Valletta</option>
+  <option value="vancouver" data-reactid="285">Vancouver</option>
+  <option value="victoria" data-reactid="286">Victoria</option>
+  <option value="vienna" data-reactid="287">Vienna</option>
+  <option value="vilnius" data-reactid="288">Vilnius</option>
+  <option value="warsaw" data-reactid="289">Warsaw</option>
+  <option value="washington-dc" data-reactid="290">Washington, D.C.</option>
+  <option value="wellington" data-reactid="291">Wellington</option>
+  <option value="winnipeg" data-reactid="292">Winnipeg</option>
+  <option value="wroclaw" data-reactid="293">Wroclaw</option>
+  <option value="yerevan" data-reactid="294">Yerevan</option>
+  <option value="zagreb" data-reactid="295">Zagreb</option>
+  <option value="zurich" data-reactid="296">Zurich</option>
+
+
+          
+          </select>
+        </div>
+        
+        <div class="input-group">
+          <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+            <option selected>Choose...</option>
+            <option value="ACCOUNT-MANAGER" data-reactid="48">Account Manager</option>
+  <option value="ACCOUNTANT" data-reactid="49">Accountant</option>
+  <option value="ADMINISTRATIVE-ASSISTANT" data-reactid="50">
+    Administrative Assistant
+  </option>
+  <option value="ARCHITECT" data-reactid="51">Architect</option>
+  <option value="ATTORNEY" data-reactid="52">Attorney</option>
+  <option value="BUSINESS-ANALYST" data-reactid="53">Business Analyst</option>
+  <option value="BUSINESS-DEVELOPMENT" data-reactid="54">
+    Business Development
+  </option>
+  <option value="C-LEVEL-EXECUTIVE" data-reactid="55">C Level Executive</option>
+  <option value="CASHIER" data-reactid="56">Cashier</option>
+  <option value="CHEF" data-reactid="57">Chef</option>
+  <option value="CHEMICAL-ENGINEER" data-reactid="58">Chemical Engineer</option>
+  <option value="CIVIL-ENGINEER" data-reactid="59">Civil Engineer</option>
+  <option value="CONTENT-MARKETING" data-reactid="60">Content Marketing</option>
+  <option value="COPYWRITER" data-reactid="61">Copywriter</option>
+  <option value="CUSTOMER-SUPPORT" data-reactid="62">Customer Support</option>
+  <option value="DATA-ANALYST" data-reactid="63">Data Analyst</option>
+  <option value="DATA-SCIENTIST" data-reactid="64">Data Scientist</option>
+  <option value="DENTIST" data-reactid="65">Dentist</option>
+  <option value="ELECTRICAL-ENGINEER" data-reactid="66">
+    Electrical Engineer
+  </option>
+  <option value="EXECUTIVE-ASSISTANT" data-reactid="67">
+    Executive Assistant
+  </option>
+  <option value="FASHION-DESIGNER" data-reactid="68">Fashion Designer</option>
+  <option value="FINANCE-MANAGER" data-reactid="69">Finance Manager</option>
+  <option value="FINANCIAL-ANALYST" data-reactid="70">Financial Analyst</option>
+  <option value="GRAPHIC-DESIGNER" data-reactid="71">Graphic Designer</option>
+  <option value="HARDWARE-ENGINEER" data-reactid="72">Hardware Engineer</option>
+  <option value="HUMAN-RESOURCES-MANAGER" data-reactid="73">
+    Human Resources Manager
+  </option>
+  <option value="IT-MANAGER" data-reactid="74">IT Manager</option>
+  <option value="INDUSTRIAL-DESIGNER" data-reactid="75">
+    Industrial Designer
+  </option>
+  <option value="INTERIOR-DESIGNER" data-reactid="76">Interior Designer</option>
+  <option value="LECTURER" data-reactid="77">Lecturer</option>
+  <option value="MARKETING-MANAGER" data-reactid="78">Marketing Manager</option>
+  <option value="MECHANICAL-ENGINEER" data-reactid="79">
+    Mechanical Engineer
+  </option>
+  <option value="MOBILE-DEVELOPER" data-reactid="80">Mobile Developer</option>
+  <option value="NURSE" data-reactid="81">Nurse</option>
+  <option value="OFFICE-MANAGER" data-reactid="82">Office Manager</option>
+  <option value="OPERATIONS-MANAGER" data-reactid="83">
+    Operations Manager
+  </option>
+  <option value="PHARMACIST" data-reactid="84">Pharmacist</option>
+  <option value="PHYSICIAN" data-reactid="85">Physician</option>
+  <option value="POSTDOCTORAL-RESEARCHER" data-reactid="86">
+    Postdoctoral Researcher
+  </option>
+  <option value="PRODUCT-MANAGER" data-reactid="87">Product Manager</option>
+  <option value="PROJECT-MANAGER" data-reactid="88">Project Manager</option>
+  <option value="QA-ENGINEER" data-reactid="89">QA Engineer</option>
+  <option value="RECEPTIONIST" data-reactid="90">Receptionist</option>
+  <option value="RESEARCH-SCIENTIST" data-reactid="91">
+    Research Scientist
+  </option>
+  <option value="SALES-MANAGER" data-reactid="92">Sales Manager</option>
+  <option value="SOFTWARE-ENGINEER" data-reactid="93">
+    Software Engineer
+  </option>
+  <option value="SYSTEMS-ADMINISTRATOR" data-reactid="94">
+    Systems Administrator
+  </option>
+  <option value="TEACHER" data-reactid="95">Teacher</option>
+  <option value="UX-DESIGNER" data-reactid="96">UX Designer</option>
+  <option value="WAITER" data-reactid="97">Waiter</option>
+  <option value="WEB-DESIGNER" data-reactid="98">Web Designer</option>
+  <option value="WEB-DEVELOPER" data-reactid="99">Web Developer</option>
+          </select>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button">Jobs</button>
+
+          </div>
+        </div>
+      </p>
+     
+    </div>
+  </div>
+
+</div>
+
+
+      </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src=./script.js async defer></script>
+    
+  </body>
+</html>
