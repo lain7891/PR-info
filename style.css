@@ -1,7 +1,8 @@
 h1 { 
-    font-size: 25 px ;
-    color: red;
+    font-size: 30 px ;
+    color:rgb(50, 50, 192);
     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
 .jumbotron {
@@ -13,4 +14,11 @@ h1 {
     margin: 0 auto; 
         float: none; 
         margin-bottom: 10px; 
+}
+
+.background{
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: right top;
+    background-size: 1500px 800px;
 }
