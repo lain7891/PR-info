@@ -1,8 +1,8 @@
 h1 { 
-    font-size: 30 px ;
+    font-size: 100 px ;
     color:rgb(50, 50, 192);
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Amatic SC', cursive;
 
 }
 .jumbotron {
@@ -16,9 +16,22 @@ h1 {
         margin-bottom: 10px; 
 }
 
-.background{
+/* .background{
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
     background-position: right top;
+    background-size: 1500px 800px;
+}  */
+
+.card {
+    background-color: lightblue;
+}
+
+.btn {
+    background-color: rgb(33, 158, 199);
+    color: white;
+    font-family: 'Amatic SC', cursive;
+}
+
+#dvImage {
     background-size: 1500px 800px;
 }
