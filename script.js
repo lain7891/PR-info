@@ -23,6 +23,30 @@ $(document).ready(function () {
   //   $(".post-search").hide();
   // }
 
+  function generateCities(){
+var queryURL = "https://developers.teleport.org/assets/urban_areas.json"
+var cityArray = Object.keys(cities);
+console.log(cityArray);
+cityArray.sort(function(a,b){
+if (a < b )return -1
+else if (a === b)return 0
+else return 1
+})
+
+for (var i = 0; i < cityArray.length; i++){
+  var option = $(`<option value="${cityArray[i]}" data-reactid="${i+1}">${cityArray[i]}</option>`)
+$("#inputGroupSelect03").append(option);
+}
+
+//     $.ajax({
+//       url: queryURL,
+//       method: "GET",
+//     }).then(function (response) {
+// // var cityArray = Object.keys(response);
+// // console.log(cityArray);
+//     });
+  }
+  generateCities();
  
   function categorySelect() {
     var category = $("#inputGroupSelect04").val();
@@ -33,6 +57,7 @@ $(document).ready(function () {
       category; 
     //   "&content-type=application/json";
     console.log(queryURL);
+
     var category = $("#inputGroupSelect04").val();
     console.log(queryURL);
     $.ajax({
@@ -40,19 +65,21 @@ $(document).ready(function () {
       method: "GET",
     }).then(function (response) {
        
+// shows raw JSON data
+      // var response_str = JSON.stringify(response);
 
-      var resp_str = JSON.stringify(response);
-      $('#job-list').append(JSON.stringify(resp_str));
 
-      // var mean_obj = resp.mean;
+
+
+      // var mean_obj = response.mean;
       // var location_obj = location.data;
       // var company_obj = location_obj.company;
       // var title_obj = location_obj.title;
       // var description_obj = location.obj.description;
       // var formatted_html = "Company: " + company_obj.company + "<br/>" +
       //                       "Job Name: " + data.obj.name + "<br/>" +
-      //                       "Title: " + location_obj.title + "<br/>";
-      // $("#job-format").append(formatted_html);                      
+      //                       "Title: " + location_obj.title + "msec";
+      // $("#job-list").append(formatted_html);                      
       // console.log(response);
       console.log("This is API response: ", response.results);
       // console.log(response.results[0].category);
@@ -60,12 +87,27 @@ $(document).ready(function () {
       // console.log(response.results[0].location);
 
       // console.log("category ", category);
-      // for (var i = 0; i < response.results; i++){
+      for (var i = 0; i < response.results.length; i++){
       // JSON.stringify(response.category);
-      // $(".description").text($(".category").text("category: " + category));
-      // $(".company").text("company: " + response.results[i].company);
-      // $(".location").text("location: " + location);
-      // };
+
+      // 1. Create div to hold all details
+      var card = `<div class="card-widget">
+        <div class="card-header" id="job-search">
+        <h2>${response.results[i].title}</h2>
+        </div>
+        <div class="card-body" id="job-list">
+        <h3>${response.results[i].company.display_name}</h3>
+        <p>${response.results[i].description}</p>
+        <a href = "${response.results[i].redirect_url}">View Details</a>
+        </div>
+      </div>`
+      var cardEL = $(card);
+      $('#job-list').append(cardEL);
+
+      // 2. For each detail create an element to hold info
+      // 3. Append the info into the div
+      // 4. Append that div onto the page
+      };
     });
   }
 
@@ -118,12 +160,12 @@ $(document).ready(function () {
   $("#submit").on("click", function (event) {
     event.preventDefault();
     geoIdentify();
-    $(".card-widget").toggle(display);
-    if ( display === true ) {
-      $( ".card-widget" ).show();
-    } else if ( display === false ) {
-      $( ".card-widget" ).hide();
-    }
+    // $(".card-widget").toggle(display);
+    // if ( display === true ) {
+    //   $( ".card-widget" ).show();
+    // } else if ( display === false ) {
+    //   $( ".card-widget" ).hide();
+    // }
     //   categorySelect();
   });
 
