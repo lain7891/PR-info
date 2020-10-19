@@ -15,39 +15,38 @@ $(document).ready(function () {
   var teleportURL = "";
   var countryCode = "";
   var selectedCity = "";
-  
+  var qolEmbedBody= ""
+  var colEmbedBody= ""
+  var jobEmbedBody=""
+  var safetyEmbedBody = ""
+  var educationEmbedBody =""
+  var climateEmbedBody =""
   
   
   //On Page load, website hides the cards
-  // function onLoad(){
-  //   $(".post-search").hide();
-  // }
-
-  function generateCities(){
-var queryURL = "https://developers.teleport.org/assets/urban_areas.json"
-var cityArray = Object.keys(cities);
-console.log(cityArray);
-cityArray.sort(function(a,b){
-if (a < b )return -1
-else if (a === b)return 0
-else return 1
-})
-
-for (var i = 0; i < cityArray.length; i++){
-  var option = $(`<option value="${cityArray[i]}" data-reactid="${i+1}">${cityArray[i]}</option>`)
-$("#inputGroupSelect03").append(option);
-}
-
-//     $.ajax({
-//       url: queryURL,
-//       method: "GET",
-//     }).then(function (response) {
-// // var cityArray = Object.keys(response);
-// // console.log(cityArray);
-//     });
+  function onLoad(){
+    $(".post-search").hide();
   }
-  generateCities();
- 
+  onLoad()
+
+  // GENERATES THE CITIES ON THE DROPDOWN
+  function generateCities(){
+    var queryURL = "https://developers.teleport.org/assets/urban_areas.json"
+    var cityArray = Object.keys(cities);
+    console.log(cityArray);
+    cityArray.sort(function(a,b){
+    if (a < b )return -1
+    else if (a === b)return 0
+    else return 1
+    })
+    
+    for (var i = 0; i < cityArray.length; i++){
+      var option = $(`<option value="${cityArray[i]}" data-reactid="${i+1}">${cityArray[i]}</option>`)
+    $("#inputGroupSelect03").append(option);
+    }
+      }
+      generateCities();
+     
   function categorySelect() {
     var category = $("#inputGroupSelect04").val();
     queryURL =
@@ -57,29 +56,12 @@ $("#inputGroupSelect03").append(option);
       category; 
     //   "&content-type=application/json";
     console.log(queryURL);
-
     var category = $("#inputGroupSelect04").val();
     console.log(queryURL);
     $.ajax({
       url: queryURL,
       method: "GET",
     }).then(function (response) {
-       
-// shows raw JSON data
-      // var response_str = JSON.stringify(response);
-
-
-
-
-      // var mean_obj = response.mean;
-      // var location_obj = location.data;
-      // var company_obj = location_obj.company;
-      // var title_obj = location_obj.title;
-      // var description_obj = location.obj.description;
-      // var formatted_html = "Company: " + company_obj.company + "<br/>" +
-      //                       "Job Name: " + data.obj.name + "<br/>" +
-      //                       "Title: " + location_obj.title + "msec";
-      // $("#job-list").append(formatted_html);                      
       // console.log(response);
       console.log("This is API response: ", response.results);
       // console.log(response.results[0].category);
@@ -87,11 +69,10 @@ $("#inputGroupSelect03").append(option);
       // console.log(response.results[0].location);
 
       // console.log("category ", category);
-      for (var i = 0; i < response.results.length; i++){
-      // JSON.stringify(response.category);
 
-      // 1. Create div to hold all details
-      var card = `<div class="card-widget">
+      // WILL LOOP THROUGH THE JOB OPTIONS
+      for (var i = 0; i < response.results.length; i++){
+        var card = `<div class="card-widget">
         <div class="card-header" id="job-search">
         <h2>${response.results[i].title}</h2>
         </div>
@@ -103,11 +84,11 @@ $("#inputGroupSelect03").append(option);
       </div>`
       var cardEL = $(card);
       $('#job-list').append(cardEL);
-
-      // 2. For each detail create an element to hold info
-      // 3. Append the info into the div
-      // 4. Append that div onto the page
       };
+      // JSON.stringify(response.category);
+      // $(".description").text($(".category").text("category: " + category));
+      // $(".company").text("company: " + response.results[i].company);
+      // $(".location").text("location: " + location);
     });
   }
 
@@ -150,22 +131,44 @@ $("#inputGroupSelect03").append(option);
     $.ajax({
       url: urbanSlugAPI,
       method: "GET",
-    }).done(function (response) {
+    }).then(function (response) {
       console.log(response);
       teleportURL = response.teleport_city_url;
-      // qualityofLife();
+      qolEmbedBody = '<a class="teleport-widget-link" href="' + teleportURL +  '">Life quality score - ' + $("#inputGroupSelect03").val().toUpperCase() + '</a><script async class="teleport-widget-script" data-url="' +teleportURL + 'widget/scores/?currency=USD&citySwitcher=false" data-max-width="420" data-height="968" src="https://teleport.org/assets/firefly/widget-snippet.min.js"></script>';
+      colEmbedBody = '<a class="teleport-widget-link" href="' +teleportURL + '">Cost of living - ' + $("#inputGroupSelect03").val().toUpperCase() + '</a><script async class="teleport-widget-script" data-url="' + teleportURL+ 'widget/costs/?currency=USD&citySwitcher=false" data-max-width="420" data-height="968" src="https://teleport.org/assets/firefly/widget-snippet.min.js"></script>'
+      jobEmbedBody = '<a class="teleport-widget-link" href="' +teleportURL + '">Job salary calculator - ' + $("#inputGroupSelect03").val().toUpperCase() + '</a><script async class="teleport-widget-script" data-url="'+ teleportURL + 'widget/salaries/?currency=USD&citySwitcher=false" data-max-width="420" data-height="968" src="https://teleport.org/assets/firefly/widget-snippet.min.js"></script>'
+      safetyEmbedBody = '<a class="teleport-widget-link display-block" href="' +teleportURL +  '">Safety - ' + $("#inputGroupSelect03").val().toUpperCase() + '</a><script async class="teleport-widget-script" data-url="'+ teleportURL + 'widget/crime/?currency=USD&citySwitcher=false" data-max-width="420" data-height="1214" src="https://teleport.org/assets/firefly/widget-snippet.min.js"></script>'
+      educationEmbedBody = '<a class="teleport-widget-link display-block" href="' +teleportURL +  '">Education - ' + $("#inputGroupSelect03").val().toUpperCase() + '</a><script async class="teleport-widget-script" data-url="'+ teleportURL + 'widget/education/?currency=USD&citySwitcher=false" data-max-width="420" data-height="1214" src="https://teleport.org/assets/firefly/widget-snippet.min.js"></script>'
+      climateEmbedBody = '<a class="teleport-widget-link display-block" href="' +teleportURL +  '">Climate - ' + $("#inputGroupSelect03").val().toUpperCase() + '</a><script async class="teleport-widget-script" data-url="'+ teleportURL + 'widget/weather/?currency=USD&citySwitcher=false" data-max-width="420" data-height="1214" src="https://teleport.org/assets/firefly/widget-snippet.min.js"></script>'
+      console.log(qolEmbedBody)
+      // // return qualityOfLife();
+      // return embedBody;
+      return qualityOfLife();
+      // console.log(embedBody);
+      // return $("#qol-widget").append(embedBody)
+     
     });
+    
+  }
+  function qualityOfLife (){
+    $("#qol-widget").empty();
+    $("#qol-widget").append(qolEmbedBody);
+    $("#col-widget").empty();
+    $("#col-widget").append(colEmbedBody);
+    $("#job-widget").empty();
+    $("#job-widget").append(jobEmbedBody);
+    $("#safety-widget").empty();
+    $("#safety-widget").append(safetyEmbedBody);
+    $("#education-widget").empty();
+    $("#education-widget").append(educationEmbedBody);
+    $("#climate-widget").empty();
+    $("#climate-widget").append(climateEmbedBody);
   }
 
   $("#submit").on("click", function (event) {
     event.preventDefault();
+    $(".post-search").show();
     geoIdentify();
-    // $(".card-widget").toggle(display);
-    // if ( display === true ) {
-    //   $( ".card-widget" ).show();
-    // } else if ( display === false ) {
-    //   $( ".card-widget" ).hide();
-    // }
     //   categorySelect();
   });
 
