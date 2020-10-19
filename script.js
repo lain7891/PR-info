@@ -19,11 +19,11 @@ $(document).ready(function () {
   
   
   //On Page load, website hides the cards
-  function onLoad(){
-    $(".post-search").hide();
-  }
+  // function onLoad(){
+  //   $(".post-search").hide();
+  // }
 
-  onLoad()
+ 
   function categorySelect() {
     var category = $("#inputGroupSelect04").val();
     queryURL =
@@ -39,18 +39,33 @@ $(document).ready(function () {
       url: queryURL,
       method: "GET",
     }).then(function (response) {
+       
+
+      var resp_str = JSON.stringify(response);
+      $('#job-list').append(JSON.stringify(resp_str));
+
+      // var mean_obj = resp.mean;
+      // var location_obj = location.data;
+      // var company_obj = location_obj.company;
+      // var title_obj = location_obj.title;
+      // var description_obj = location.obj.description;
+      // var formatted_html = "Company: " + company_obj.company + "<br/>" +
+      //                       "Job Name: " + data.obj.name + "<br/>" +
+      //                       "Title: " + location_obj.title + "<br/>";
+      // $("#job-format").append(formatted_html);                      
       // console.log(response);
       console.log("This is API response: ", response.results);
       // console.log(response.results[0].category);
       // console.log(response.results[0].company);
       // console.log(response.results[0].location);
 
-      console.log("category ", category);
-      for (var i = 0; i < response.results; i++);
-      JSON.stringify(response.category);
-      $(".description").text($(".category").text("category: " + category));
-      $(".company").text("company: " + response.results[i].company);
-      $(".location").text("location: " + location);
+      // console.log("category ", category);
+      // for (var i = 0; i < response.results; i++){
+      // JSON.stringify(response.category);
+      // $(".description").text($(".category").text("category: " + category));
+      // $(".company").text("company: " + response.results[i].company);
+      // $(".location").text("location: " + location);
+      // };
     });
   }
 
@@ -103,6 +118,12 @@ $(document).ready(function () {
   $("#submit").on("click", function (event) {
     event.preventDefault();
     geoIdentify();
+    $(".card-widget").toggle(display);
+    if ( display === true ) {
+      $( ".card-widget" ).show();
+    } else if ( display === false ) {
+      $( ".card-widget" ).hide();
+    }
     //   categorySelect();
   });
 

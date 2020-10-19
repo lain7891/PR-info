@@ -15,6 +15,7 @@ h1 {
         float: none; 
         margin-bottom: 10px; 
         background-color: lightblue;
+        
 }
 
 #submit {
@@ -44,6 +45,7 @@ h1 {
     background-color: lightblue;
     font-family: 'Amatic SC', cursive;
     margin-top: 25px;
+    /* display: none; */
 }
 
  body {
